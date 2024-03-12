@@ -29,9 +29,11 @@ def pertanyaan_1():
     st.pyplot(fig_day)
 
     st.write("Grafik di atas menunjukkan tren rata-rata jumlah sewa sepeda harian berdasarkan musim. Anda dapat melihat bagaimana musim mempengaruhi jumlah sewa sepeda harian secara keseluruhan.")
+    st.write("Musim yang menawarkan kondisi cuaca yang lebih hangat dan nyaman, seperti Summer (Musim Panas) dan Fall (Musim Gugur), cenderung mengalami tingkat penyewaan sepeda yang lebih tinggi dibandingkan dengan musim yang lebih dingin seperti Winter (Musim Dingin). Ini bisa dikaitkan dengan faktor-faktor seperti suhu yang lebih menyenangkan, kondisi jalan yang lebih aman, dan hari yang lebih panjang, yang secara keseluruhan menciptakan kondisi yang lebih mengundang untuk bersepeda.
 
-    # Menambahkan penjelasan atau analisis lebih lanjut jika diperlukan
-    st.write("Analisis lebih lanjut dapat melibatkan penjelasan tentang fluktuasi musiman, kemungkinan puncak atau penurunan tertentu, dan implikasi untuk bisnis penyewaan sepeda.")
+Sebaliknya, musim dengan kondisi cuaca yang kurang menyenangkan seperti Winter (Musim Dingin) menunjukkan penurunan jumlah penyewaan sepeda, yang mungkin disebabkan oleh suhu yang sangat dingin, kemungkinan adanya salju atau es, dan hari yang lebih pendek, yang semuanya dapat menurunkan minat dan kenyamanan dalam bersepeda.
+
+Spring (Musim Semi), sementara itu, mungkin menunjukkan tingkat penyewaan sepeda yang bervariasi, tergantung pada lokasi geografis dan bagaimana kondisi cuaca transisional dari dingin ke hangat berpengaruh terhadap keinginan bersepeda.")
 
 def pertanyaan_2():
     st.markdown("## Pertanyaan 2")
@@ -58,6 +60,7 @@ def pertanyaan_2():
     plt.ylabel("Sewa Sepeda Harian")
     st.pyplot(fig_hourly)
     st.write("Grafik di atas menunjukkan pola harian dalam frekuensi penyewaan sepeda berdasarkan bulan dan jam. Anda dapat melihat fluktuasi sepanjang hari dan perubahan sepanjang bulan.")
+    st.write("Pertama, terdapat variasi musiman yang signifikan, dengan bulan-bulan hangat menunjukkan aktivitas penyewaan yang lebih tinggi, yang menegaskan bahwa kondisi cuaca dan kenyamanan bersepeda memainkan peran kunci dalam mempengaruhi keputusan penyewaan sepeda. Kedua, dalam skala harian, terlihat adanya pola permintaan ganda yang berkorelasi dengan jam-jam berangkat dan pulang kerja, menyoroti peran penting sepeda dalam mobilitas perkotaan sebagai sarana transportasi komuter.")
 
 def main():
     st.title("Bike Sharing Dashboard")
