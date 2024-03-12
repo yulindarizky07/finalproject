@@ -4,7 +4,8 @@
 
 1. pip install pandas
 2. pip install matplotlib
-3. pip install streamlit
+3. pip install numpy
+4. pip install streamlit
 
 ### Run ipynb file
 
