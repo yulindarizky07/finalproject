@@ -45,7 +45,7 @@ def pertanyaan_2():
     # Plot pola harian berdasarkan bulan
     st.subheader("Pola Harian Berdasarkan Bulan")
     fig_monthly, ax_monthly = plt.subplots(figsize=(12, 6))
-    sns.lineplot(x="mnth", y="cnt_daily", data=data_bike_day, ci=None, ax=ax_monthly)
+    sns.lineplot(x="mnth_daily", y="cnt_daily", data=data_bike_day, ci=None, ax=ax_monthly)
     plt.title("Pola Sewa Sepeda Harian Berdasarkan Bulan")
     plt.xlabel("Bulan")
     plt.ylabel("Sewa Sepeda Harian")
