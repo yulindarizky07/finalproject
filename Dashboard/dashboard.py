@@ -4,7 +4,7 @@ import streamlit as st
 import seaborn as sns
 
 data_bike_day = pd.read_csv('https://raw.githubusercontent.com/yulindarizky07/finalproject/main/Dashboard/day_cleaned.csv')
-data_bike_hor = pd.read_csv('https://raw.githubusercontent.com/yulindarizky07/finalproject/main/Dashboard/hour_cleaned.csv')
+data_bike_hour = pd.read_csv('https://raw.githubusercontent.com/yulindarizky07/finalproject/main/Dashboard/hour_cleaned.csv')
 
 def pertanyaan_1():
     st.markdown("## Pertanyaan 1")
@@ -56,7 +56,7 @@ def pertanyaan_2():
     # Plot pola harian berdasarkan jam
     st.subheader("Pola Harian Berdasarkan Jam")
     fig_hourly, ax_hourly = plt.subplots(figsize=(12, 6))
-    sns.lineplot(x="hr", y="cnt_hourly", data=data_bike_hour, ci=None, ax=ax_hourly)
+    sns.lineplot(x="hr", y="cnt", data=data_bike_hour, ci=None, ax=ax_hourly)
     plt.title("Pola Sewa Sepeda Harian Berdasarkan Jam")
     plt.xlabel("Jam")
     plt.ylabel("Sewa Sepeda Harian")
