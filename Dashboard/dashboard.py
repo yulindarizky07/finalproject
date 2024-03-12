@@ -18,13 +18,13 @@ def pertanyaan_1():
     seasonal_averages_day = data_bike_day.groupby('season')['cnt'].mean()
     season_names = ['Spring', 'Summer', 'Fall', 'Winter']
 
-    # Membuat grafik menggunakan Matplotlib
+    # Membuat bar chart menggunakan Matplotlib
     fig_day, ax_day = plt.subplots(figsize=(10, 6))
-    sns.lineplot(x=season_names, y=seasonal_averages_day, marker='o', color='b', ax=ax_day)
+    sns.barplot(x=season_names, y=seasonal_averages_day, palette="viridis", ax=ax_day)
     plt.title('Rata-rata Sewa Sepeda Harian Berdasarkan Musim')
     plt.xlabel('Musim')
     plt.ylabel('Rata-rata Sewa Sepeda Harian')
-
+    
     # Menampilkan grafik di Streamlit
     st.pyplot(fig_day)
 
