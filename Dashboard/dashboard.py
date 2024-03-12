@@ -56,7 +56,7 @@ def pertanyaan_2():
     # Plot pola harian berdasarkan jam
     st.subheader("Pola Harian Berdasarkan Jam")
     fig_hourly, ax_hourly = plt.subplots(figsize=(12, 6))
-    sns.lineplot(x="hr", y="cnt_hourly", data=data_bike_hor, ci=None, ax=ax_hourly)
+    sns.lineplot(x="hr", y="cnt_hourly", data=data_bike_hour, ci=None, ax=ax_hourly)
     plt.title("Pola Sewa Sepeda Harian Berdasarkan Jam")
     plt.xlabel("Jam")
     plt.ylabel("Sewa Sepeda Harian")
