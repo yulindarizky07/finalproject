@@ -42,9 +42,6 @@ def pertanyaan_2():
     st.markdown("#### Apakah terdapat pola terkait waktu, misalnya berdasarkan bulan atau jam, dalam frekuensi penyewaan sepeda setiap hari?")
     st.write("Untuk mendapatkan jawaban dari pertanyaan di atas, akan ditampilkan visualisasi yang menunjukkan pola terkait waktu dalam frekuensi penyewaan sepeda setiap hari.")
 
-    # Membuat plot menggunakan data harian
-    st.set_option('deprecation.showPyplotGlobalUse', False)  # Agar tidak muncul warning
-    
     # Plot pola harian berdasarkan bulan
     st.subheader("Pola Harian Berdasarkan Bulan")
     fig_monthly, ax_monthly = plt.subplots(figsize=(12, 6))
