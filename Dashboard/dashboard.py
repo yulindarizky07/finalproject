@@ -53,7 +53,7 @@ pertanyaan_1()
 
 def pertanyaan_2():
     st.markdown("## Pertanyaan 2")
-    st.markdown("####  Apakah terdapat pola terkait waktu, misalnya berdasarkan bulan atau jam, dalam frekuensi penyewaan sepeda setiap hari? ?")
+    st.markdown("#### Apakah terdapat pola terkait waktu, misalnya berdasarkan bulan atau jam, dalam frekuensi penyewaan sepeda setiap hari?")
     st.write("Untuk mendapatkan jawaban dari pertanyaan di atas, akan ditampilkan visualisasi yang menunjukkan pola terkait waktu dalam frekuensi penyewaan sepeda setiap hari.")
 
     # Membuat plot menggunakan data harian
@@ -61,21 +61,21 @@ def pertanyaan_2():
 
     # Plot pola harian berdasarkan bulan
     st.subheader("Pola Harian Berdasarkan Bulan")
-    fig_monthly, ax_monthly = plt.subplots(figsize=(12, 6))
-    sns.lineplot(x="mnth_daily", y="cnt_daily", data=data_bike_day, ci=None, ax=ax_monthly)
-    plt.title("Pola Sewa Sepeda Harian Berdasarkan Bulan")
-    plt.xlabel("Bulan")
-    plt.ylabel("Sewa Sepeda Harian")
-    st.pyplot(fig_monthly)
+    
+    # Check for the existence of the necessary columns
+    if 'mnth_daily' in data_bike_day.columns and 'cnt_daily' in data_bike_day.columns:
+        # Print a sample of the data for exploration
+        st.write(data_bike_day[['mnth_daily', 'cnt_daily']].head())
 
-    # Plot pola harian berdasarkan jam
-    st.subheader("Pola Harian Berdasarkan Jam")
-    fig_hourly, ax_hourly = plt.subplots(figsize=(12, 6))
-    sns.lineplot(x="hr", y="cnt_hourly", data=data_bike_hor, ci=None, ax=ax_hourly)
-    plt.title("Pola Sewa Sepeda Harian Berdasarkan Jam")
-    plt.xlabel("Jam")
-    plt.ylabel("Sewa Sepeda Harian")
-    st.pyplot(fig_hourly)
+        # Plot the data
+        fig_monthly, ax_monthly = plt.subplots(figsize=(12, 6))
+        sns.lineplot(x='mnth_daily', y='cnt_daily', data=data_bike_day, ci=None, ax=ax_monthly)
+        plt.title("Pola Sewa Sepeda Harian Berdasarkan Bulan")
+        plt.xlabel("Bulan")
+        plt.ylabel("Sewa Sepeda Harian")
+        st.pyplot(fig_monthly)
+    else:
+        st.write("Column 'mnth_daily' or 'cnt_daily' not found in the DataFrame.")
 
     st.write("Grafik di atas menunjukkan pola harian dalam frekuensi penyewaan sepeda berdasarkan bulan dan jam. Anda dapat melihat fluktuasi sepanjang hari dan perubahan sepanjang bulan.")
 
