@@ -33,10 +33,6 @@ def pertanyaan_1():
     # Menambahkan penjelasan atau analisis lebih lanjut jika diperlukan
     st.write("Analisis lebih lanjut dapat melibatkan penjelasan tentang fluktuasi musiman, kemungkinan puncak atau penurunan tertentu, dan implikasi untuk bisnis penyewaan sepeda.")
 
-# Panggil fungsi untuk menampilkan visualisasi
-pertanyaan_1()
-
-
 def pertanyaan_2():
     st.markdown("## Pertanyaan 2")
     st.markdown("#### Apakah terdapat pola terkait waktu, misalnya berdasarkan bulan atau jam, dalam frekuensi penyewaan sepeda setiap hari?")
@@ -62,9 +58,6 @@ def pertanyaan_2():
     plt.ylabel("Sewa Sepeda Harian")
     st.pyplot(fig_hourly)
     st.write("Grafik di atas menunjukkan pola harian dalam frekuensi penyewaan sepeda berdasarkan bulan dan jam. Anda dapat melihat fluktuasi sepanjang hari dan perubahan sepanjang bulan.")
-
-# Panggil fungsi untuk menampilkan visualisasi
-pertanyaan_2()
 
 def main():
     st.title("Bike Sharing Dashboard")
