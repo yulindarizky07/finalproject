@@ -60,7 +60,7 @@ def pertanyaan_2():
     plt.ylabel("Sewa Sepeda Harian")
     st.pyplot(fig_hourly)
     st.write("Grafik di atas menunjukkan pola harian dalam frekuensi penyewaan sepeda berdasarkan bulan dan jam. Anda dapat melihat fluktuasi sepanjang hari dan perubahan sepanjang bulan.")
-    st.write("st.write("Pertama, terdapat variasi musiman yang signifikan. Bulan-bulan hangat menunjukkan aktivitas penyewaan yang lebih tinggi, menegaskan bahwa kondisi cuaca dan kenyamanan bersepeda memainkan peran kunci dalam mempengaruhi keputusan penyewaan sepeda."
+    st.write("Pertama, terdapat variasi musiman yang signifikan. Bulan-bulan hangat menunjukkan aktivitas penyewaan yang lebih tinggi, menegaskan bahwa kondisi cuaca dan kenyamanan bersepeda memainkan peran kunci dalam mempengaruhi keputusan penyewaan sepeda."
          "Kedua, dalam skala harian, terlihat adanya pola permintaan ganda yang berkorelasi dengan jam-jam berangkat dan pulang kerja. Hal ini menyoroti peran penting sepeda dalam mobilitas perkotaan sebagai sarana transportasi komuter.")
 
 def main():
